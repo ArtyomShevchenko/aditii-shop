@@ -4,6 +4,8 @@
     --gray: #a1a1a1;
     --white: #fff;
     --green: #3cc395;
+    --red: tomato;
+    --black: #000;
 }
 
 html {
@@ -239,6 +241,49 @@ footer ul {
     }
 }
 
+.cards_basked {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards_basked .card {
+    width: 100%;
+    max-height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 4rem;
+    font-size: 1.5rem;
+    text-align: start;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.cards_basked .card_hidden {
+    height: 0px;
+    background-color: red;
+}
+
+.cards_basked .card > div {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.cards_basked .card img {
+    width: 200px;
+}
+
+.cards_basked .card h3 {
+    color: var(--black);
+    font-size: 3rem;
+}
+
+.cards_basked .card button {
+    background-color: var(--red);
+}
+
 /* card */
 
 .card {
@@ -276,6 +321,8 @@ footer ul {
     object-position: center;
 }
 
+
+
 /* theam color */
 .light {
     background-color: var(--white);
@@ -293,4 +340,27 @@ footer ul {
     padding: 0.5rem;
     color: var(--white);
     background-color: rgba(0, 0, 0, 0.15);
+}
+
+.Basket-container {
+    height: 100%;
+    flex-grow: 1;
+}
+
+.basket-total {
+    padding: 4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    border-top: 2px solid var(--lightgray);
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* sdadsad */
+
+
+.red {
+    background-color: red;
 }

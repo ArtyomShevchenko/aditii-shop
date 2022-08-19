@@ -3,11 +3,12 @@ import Context from "../Context";
 import db from "../db";
 
 const Shoes = (props) => {
-    const shoes = db.filter(element => element.type === "shoes")
     const context = React.useContext(Context);
+    const shoes = db.filter(element => element.type === "shoes")
 
     const handleclick = (i) => {
         context.basket.push(shoes[i])
+        context.forceUpdate()
     }
 
     return (

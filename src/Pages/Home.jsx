@@ -7,6 +7,7 @@ const Home = (props) => {
 
     const handleclick = (i) => {
         context.basket.push(db[i])
+        context.forceUpdate()
     }
 
     return (

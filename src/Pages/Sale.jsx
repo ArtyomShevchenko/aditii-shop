@@ -1,6 +1,7 @@
 import React from "react";
 
 const Sale = (props) => {
+    
     return (
         <div className="Sale-container">
             <div className="container">

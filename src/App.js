@@ -21,38 +21,48 @@ import Error from "./Pages/Error";
 
 const realTime = new Date().getHours()
 
-function App() {
-  const [style, setStyle] = React.useState(() => {
-    if (realTime > 6 && realTime < 20) {
-      return "light"
-    } else {
-      return "dark"
-    }
-  })
 
-  const [price, setPrice] = React.useState(0)
+function App() {
+  // стан для зміни теми сторінки
+  const [style, setStyle] = React.useState(realTime > 6 && realTime < 20 ? "light" : "dark");
+
+  // стан для примусового рендеру
+  const [refresh, setRefresh] = React.useState(0);
+
+  // функція яка змінює стан (boolean - не кращій варіант якщо треба в багатьох компонентах оновлювать)
+  const forceUpdate = () => {
+    setRefresh(prev => prev + 1)
+  }
 
   const data = {
     basket: [
-      { type: "backpack", title: "branded backpack", price: "35", image: "backpack_5.png" },
-      { type: "backpack", title: "branded backpack", price: "36", image: "backpack_6.png" },
+      { type: "backpack", title: "branded backpack", description: "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight types of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.", price: "35", image: "backpack_5.png" },
+      { type: "backpack", title: "branded backpack", description: "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight types of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.", price: "35", image: "backpack_5.png" },
+      { type: "backpack", title: "branded backpack", description: "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight types of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.", price: "36", image: "backpack_6.png" },
+      { price: "35", image: "backpack_5.png", title: "branded backpack" },
+      { price: "36", image: "backpack_6.png", title: "branded backpack" },
+      { price: "32", image: "backpack_4.png", title: "branded backpack" },
     ],
+    allCost: () => {
+      let sum = 0;
+      data.basket.forEach(e => sum += Number(e.price));
+      return sum
+    },
+    console: () => console.log(data),
+    forceUpdate: () => {
+      setRefresh(prev => prev + 1)
+      setDatabase(data)
+    },
   };
 
-  React.useEffect( () => {
-    data.basket.forEach(element => {
-      setPrice(Number(price) + Number(element.price))
-    })
-  }, [data.basket.length])
+  const [database, setDatabase] = React.useState(data)
 
   return (
-    <Context.Provider value={data}>
-      
-      <h1 className="wrapper" style={{fontSize: "50px"}}>{price}</h1>
-
-      {/* <button onClick={ () => style === "light" ? setStyle("dark") : setStyle("light")}>toggle theam</button> */}
-      {/* <div className="App" style={{ backgroundColor: theam.style[index].background, color: theam.style[index].color }}> */}
-      <div className={`App ` + style}>
+    <Context.Provider value={database}>
+      {/* <h1 className="wrapper" style={{ fontSize: "4rem" }}>{database.allCost()}</h1>
+      <button onClick={forceUpdate}>Update App</button> */}
+      {/* <div className={`App ` + style}> */}
+      <div className={`App `}>
         <Header />
         <Routes>
           <Route path={"/" ? "/" : "Home"} element={<Home />} />
