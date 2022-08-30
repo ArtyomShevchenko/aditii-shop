@@ -1,17 +1,19 @@
 import React from "react";
-import Context from "../Context"
-import db from "../db";
+import Context from "../Context";
+import Carusel from "../Components/Carusel"
+// import db from "../db";
 
 const Home = (props) => {
     const context = React.useContext(Context);
 
     const handleclick = (i) => {
-        context.basket.push(db[i])
+        context.basket.push(context.homePageArr[i])
         context.forceUpdate()
     }
 
     return (
         <div className="Home-container">
+            {/* <Carusel /> */}
             <div className="container">
                 <h2>
                     <div className="wrapper">
@@ -20,7 +22,7 @@ const Home = (props) => {
                 </h2>
                 <div className="wrapper">
                     <div className="cards">
-                        {db.map((element, index) => {
+                        {context.homePageArr.map((element, index) => {
                             return (
                                 <section className="card" key={index}>
                                     <img src={require("../i/" + element.image)} alt="Image" />

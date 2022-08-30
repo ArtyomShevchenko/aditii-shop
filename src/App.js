@@ -4,6 +4,8 @@ import Context from "./Context";
 import './App.css';
 import './fonts.css';
 
+import db from "./db";
+
 import Header from "./Pages/Header";
 import Footer from "./Pages/Footer";
 import Home from "./Pages/Home";
@@ -34,6 +36,28 @@ function App() {
     setRefresh(prev => prev + 1)
   }
 
+  const random = (length) => {
+    const num = Math.floor(Math.random() * length)
+    return num;
+  }
+
+// 
+console.clear()
+
+  const generateArr = (length) => {
+    const arr = []
+    const arrIndex = []
+
+    for (let i = 0; i < length; i++) {
+      const num = random(db.length)
+      arr.push(db[num])
+      arrIndex.push(num)
+    }
+
+    console.log(arrIndex)
+    return arr
+  }
+
   const data = {
     basket: [
       { type: "backpack", title: "branded backpack", description: "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight types of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.", price: "35", image: "backpack_5.png" },
@@ -53,6 +77,7 @@ function App() {
       setRefresh(prev => prev + 1)
       setDatabase(data)
     },
+    homePageArr: generateArr(6),
   };
 
   const [database, setDatabase] = React.useState(data)

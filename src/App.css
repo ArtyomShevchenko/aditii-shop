@@ -360,7 +360,61 @@ footer ul {
 
 /* sdadsad */
 
-
 .red {
     background-color: red;
+}
+
+/* test swiper */
+.swiper-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.swiper-container .btn {
+    display: block;
+    width: 60px;
+    min-height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.swiper-container .btn:nth-child(1) {
+    background-color: red;
+    right: 0;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.swiper-container .btn:nth-child(2) {
+    background-color: blue;
+    left: 0;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.swiper-container .items {
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    transition: all 1s;
+}
+
+.swiper-container .item {
+    width: 1024px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-container .item:nth-child(1) {
+    background-color: lightblue
+}
+.swiper-container .item:nth-child(2) {
+    background-color: lightgrey
+}
+.swiper-container .item:nth-child(3) {
+    background-color: lightpink
+}
+.swiper-container .item:nth-child(4) {
+    background-color: lightgreen
 }

@@ -6,6 +6,10 @@ const Basket = (props) => {
     const context = React.useContext(Context);
     const [backetArr, setBacketArr] = React.useState(context.basket);
 
+    React.useEffect( () => {
+        context.forceUpdate()
+    })
+
     return (
         <div className="Basket-container">
             <div className="container">
