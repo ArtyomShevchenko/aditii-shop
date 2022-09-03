@@ -1,7 +1,7 @@
 import React from "react";
 import Context from "../Context";
-import Carusel from "../Components/Carusel"
-// import db from "../db";
+import Swiper from "../Components/Swiper";
+import Carusel from "../Components/Carusel";
 
 const Home = (props) => {
     const context = React.useContext(Context);
@@ -11,9 +11,12 @@ const Home = (props) => {
         context.forceUpdate()
     }
 
+    const swiperArr = context.swiperArr
+
     return (
         <div className="Home-container">
-            {/* <Carusel /> */}
+            <Carusel />
+            <Swiper swiperArr={swiperArr} />
             <div className="container">
                 <h2>
                     <div className="wrapper">
