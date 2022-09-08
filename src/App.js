@@ -75,6 +75,7 @@ function App() {
     },
     homePageArr: generateArr(6),
     swiperArr: generateArr(12),
+    caruselArr: generateArr(5),
   };
 
   const [database, setDatabase] = React.useState(data)

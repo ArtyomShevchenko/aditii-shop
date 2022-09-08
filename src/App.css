@@ -458,7 +458,7 @@ footer ul {
 }
 
 /* test */
-.carusel-item:nth-child(1n) {
+/* .carusel-item:nth-child(1n) {
     background-color: lightcoral;
 }
 .carusel-item:nth-child(2n) {
@@ -469,5 +469,5 @@ footer ul {
 }
 
 .lime-class {
-    filter: brightness(0.5);
-}
+    filter: brightness(0.5); */
+/* } */
