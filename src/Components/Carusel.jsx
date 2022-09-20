@@ -1,17 +1,25 @@
 import React from "react";
 import Context from "../Context";
-
-// const arr = ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3", "3.1", "3.2", "3.3"]
+import styled from 'styled-components';
 
 const Carusel = (props) => {
     const context = React.useContext(Context)
     const [transformX, setTransformX] = React.useState(0)
 
+    React.useEffect(e => {
+        document.querySelector(".pagination-item").classList.add("pagination-item_select");
+    }, [])
+
+    // clearInterval(interval)
+
+    const interval = setInterval(() => {
+        console.log(transformX)
+    }, 1000)
+
     const arr = context.caruselArr
 
     // get width preRender
     const ref = React.useRef(null);
-    const selectRef = React.useRef(null)
 
     const [width, setWidth] = React.useState(0)
 
@@ -20,69 +28,61 @@ const Carusel = (props) => {
     }, []);
 
     // property
-    let numbersItems = 0;
+    // let numbersItems = 0;
+
+    // const dragEvent = {
+    //     start: 0,
+    //     move: 0,
+    //     count: 0,
+    // }
 
     // style
-    const container = {
-        height: "400px",
-        backgroundColor: "#3cc3b5",
-        display: "flex",
-        justifyContent: "center",
-        filter: "brightness(0.95)",
-    }
+    // const container = {
+    //     height: "400px",
+    //     backgroundColor: "#3cc3b5",
+    //     display: "flex",
+    //     justifyContent: "center",
+    //     filter: "brightness(0.95)",
+    // }
 
-    const itemsStyle = {
-        transform: `translate(${transformX}px)`,
-        transition: "all 1s",
-        display: "flex",
-        width: "100%",
-        height: "100%",
-    }
+    // const itemsStyle = {
+    //     transform: `translate(${transformX}px)`,
+    //     transition: "all 1s",
+    //     display: "flex",
+    //     width: "100%",
+    //     height: "100%",
+    // }
 
-    const itemStyle = {
-        minWidth: "100%",
-        height: "100%",
-        // display: "flex",
-        // alignItems: "center",
-        // justifyContent: "center",
-        // fontSize: "2rem",
+    // const itemStyle = {
+    //     minWidth: "100%",
+    //     height: "100%",
 
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        placeItems: "center",
+    //     display: "grid",
+    //     gridTemplateColumns: "1fr 1fr",
+    //     placeItems: "center",
 
-        color: "white",
-        userSelect: "none",
-        transition: "all 0.2s",
-    }
+    //     color: "white",
+    //     userSelect: "none",
+    //     transition: "all 0.2s",
+    // }
 
-    const paginationContainerStyle = {
-        padding: "20px",
-        display: "flex",
-        gap: "10px",
-        position: "absolute",
-        bottom: 0,
-        left: "50%",
-        transform: "translateX(-50%)"
-    }
+    // const buttonStyle = {
+    //     padding: "1rem 2rem",
+    //     backgroundColor: "transparent",
+    //     border: "2px solid white",
+    //     marginRight: "auto",
+    // }
 
-    const paginationIconStyle = {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        borderRadius: "50%",
-        width: "9px",
-        height: "9px",
-        backgroundColor: "white",
-        cursor: "pointer",
-    }
+    // const paginationContainerStyle = {
+    //     padding: "20px",
+    //     display: "flex",
+    //     gap: "10px",
+    //     position: "absolute",
+    //     bottom: 0,
+    //     left: "50%",
+    //     transform: "translateX(-50%)"
+    // }
 
-    const buttonStyle = {
-        padding: "1rem 2rem",
-        backgroundColor: "transparent",
-        border: "2px solid white",
-        marginRight: "auto",
-    }
 
     // test
     // const handleclick = (i) => {
@@ -90,46 +90,20 @@ const Carusel = (props) => {
     //     context.forceUpdate()
     // }
 
-    const dragEvent = {
-        start: 0,
-        move: 0,
-        count: 0,
-    }
-
     return (
-        <div className="carusel-container" style={container}>
-
-            <div className="view-container wrapper" style={{ height: "100%", margin: "0", width: "1024px", position: "relative", overflow: "hidden" }}>
-                <div className="carusel-items"
-                    style={itemsStyle}
-                    onMouseDown={(e) => dragEvent.start = e.screenX}
-                    onMouseUp={(e) => {
-                        dragEvent.moveTo = dragEvent.start - e.screenX
-
-                        if (dragEvent.moveTo > 0) {
-                            transformX <= -(width * (numbersItems - 1)) ? setTransformX(-(width * (numbersItems - 1))) : setTransformX(transformX - width)
-                        }
-
-                        if (dragEvent.moveTo < 0) {
-                            transformX >= 0 ? setTransformX(0) : setTransformX(transformX + width)
-                        }
-                    }}
-                >
+        <PaginationContainer>
+            <div className="wrapper">
+                <div className="carusel-items" style={{ transform: `translate(${transformX}px)` }}>
                     {arr.map((item, index) => {
-                        numbersItems += 1;
                         return (
-                            <div className="carusel-item"
-                                style={itemStyle}
-                                key={index}
-                                ref={ref}
-                            >
-                                <div style={{maxWidth: "100%", maxHeight: "100%", padding: "4rem", display: "flex", alignItems: "center", justifyContent: "center"}}>
-                                    <img src={require("../i/" + item.image)} alt="Image" style={{ height: "100%", width: "100%", objectFit: "containe"}}/>
-                                </div>
-                                <div style={{display: "flex", flexDirection: "column", gap: "2rem"}}>
-                                    <h3 style={{fontSize: "6rem", lineHeight: "5.4rem", whiteSpace: "pre-wrap"}}>{item.title}</h3>
+                            <div className="carusel-item" key={index} ref={ref}>
+                                {/* <div className="image-container"> */}
+                                    <img src={require("../i/" + item.image)} alt="Image" />
+                                {/* </div> */}
+                                <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
+                                    <h3>{item.title}</h3>
                                     <p>{item.description}</p>
-                                    <button style={buttonStyle}>Shop now</button>
+                                    <button>Shop now</button>
                                 </div>
                             </div>
                         )
@@ -138,25 +112,114 @@ const Carusel = (props) => {
                 </div>
             </div>
 
-            <ul className="pagination-container" style={paginationContainerStyle}>
+            <div className="pagination-container" >
                 {arr.map((element, index) => {
                     return (
-                        <li key={index}
-                            style={paginationIconStyle}
-                            onClick={() => {
-                                setTransformX(-width * index)
-                                console.log(ref.current)
-                            }}
-                            onMouseEnter={e => e.target.style.opacity = "0.3"}
-                            onMouseLeave={e => e.target.style.opacity = "1"}
-                        >
-                            {index}
-                        </li>
+                        <div key={index}>
+                            <div
+                                className="pagination-item"
+                                onClick={(e) => {
+                                    setTransformX(-width * index)
+
+                                    const collect = document.querySelectorAll(".pagination-item")
+                                    collect.forEach(item => {
+                                        item.classList.remove("pagination-item_select")
+                                    })
+                                    collect[index].classList.add("pagination-item_select")
+                                }}>
+                            </div>
+                        </div>
                     )
                 })}
-            </ul>
-        </div>
+            </div>
+        </PaginationContainer>
     )
 };
 
 export default Carusel;
+
+
+const PaginationContainer = styled.div`
+    height: 400px;
+    background-color: #3cc3b5;
+    display: flex;
+    justify-content: center;
+    filter: brightness(0.95);
+    color: white;
+
+    .wrapper {
+        height: 100%;
+        margin: 0;
+        width: 1024px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    h3 {
+        font-size: 6rem;
+        line-height: "5.4rem";
+        white-space: pre-wrap;
+    }
+
+    .image-container {
+        width: 100%;
+        max-height: 100%;
+        position: relative;
+    }
+
+    img {
+        width: 100%;
+        max-height: 100%;
+        object-fit: containe;
+    }
+
+    .carusel-item {
+        min-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 4rem;
+        place-items: center;
+        user-select: none;
+        transition: all 0.2s;
+    }
+
+    button {
+        padding: 1rem 2rem;
+        background-color: transparent;
+        border: 2px solid white;
+        margin-right: auto;
+        box-shadow: none;
+    }
+
+    .carusel-items {
+        // transform: translate(100px);
+        transition: all 1s;
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    .pagination-container {
+        padding: 20px;
+        display: flex;
+        gap: 10px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .pagination-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 9px;
+        height: 9px;
+        background-color: white;
+        cursor: pointer;
+        opacity: 1;
+    }
+    .pagination-item_select {
+        opacity: 0.3;
+    }
+`;

@@ -4,8 +4,6 @@ import Context from "./Context";
 import './App.css';
 import './fonts.css';
 
-import db from "./db";
-
 import Header from "./Pages/Header";
 import Footer from "./Pages/Footer";
 import Home from "./Pages/Home";
@@ -23,6 +21,7 @@ import Error from "./Pages/Error";
 
 const realTime = new Date().getHours()
 
+const db = require("./db.json")
 
 function App() {
   // стан для зміни теми сторінки
