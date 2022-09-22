@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Copyright from "../Components/Copyright"
+import Copyright from "../Components/Copyright";
+import styled from "styled-components";
 
 const persons = {
     "featured sale": [
@@ -46,33 +47,62 @@ const persons = {
 }
 
 const Footer = (props) => {
-    return (
-        <footer>
-            <div className="container">
-                <div className="wrapper">
-                    {Object.keys(persons).map((person, index) => {
-                        return (
-                            <div key={index}>
-                                <h1>{person}</h1>
-                                <ul>
-                                    {persons[person].map((element, index) => {
-                                        return (
-                                            <li key={index}>
-                                                <Link to={element.link}>
-                                                    {element.id}
-                                                </Link>
-                                            </li>
-                                        )
-                                    })}
-                                </ul>
-                            </div>
-                        )
-                    })}
-                </div>
+    return (<>
+        <FooterStyled>
+            <div className="wrapper">
+                {Object.keys(persons).map((person, index) => {
+                    return (
+                        <div key={index}>
+                            <h1>{person}</h1>
+                            <ul>
+                                {persons[person].map((element, index) => {
+                                    return (
+                                        <li key={index}>
+                                            <Link to={element.link}>
+                                                {element.id}
+                                            </Link>
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                        </div>
+                    )
+                })}
             </div>
-            <Copyright />
-        </footer>
+        </FooterStyled>
+        <Copyright />
+    </>
     )
 };
 
 export default Footer;
+
+const FooterStyled = styled.footer`
+margin-top: auto;
+background-color: var(--color2);
+color: var(--color4);
+font-size: 1.5rem;
+padding-top: 4rem;
+padding-bottom: 4rem;
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    grid-gap: 2rem;
+}
+
+@media (max-width: 768px ) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+    }
+}
+
+ul {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}`;

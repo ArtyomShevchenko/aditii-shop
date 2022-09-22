@@ -12,10 +12,6 @@ const Carusel = (props) => {
 
     // clearInterval(interval)
 
-    const interval = setInterval(() => {
-        console.log(transformX)
-    }, 1000)
-
     const arr = context.caruselArr
 
     // get width preRender
