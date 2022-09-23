@@ -94,9 +94,8 @@ padding-bottom: 4rem;
 
 @media (max-width: 768px ) {
     .wrapper {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
-        place-items: center;
+        gap: 4rem 2rem;
     }
 }
 

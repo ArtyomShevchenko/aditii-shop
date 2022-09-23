@@ -1,13 +1,12 @@
 import React from "react";
+import Title from "../Components/Title";
 
 const ContactUs = (props) => {
     return (
         <div className="ContactUs-container">
-            <div className="container">
-                <div className="wrapper">
-                    <h1>ContactUs</h1>
-                </div>
-            </div>
+            <Title>
+                ContactUs
+            </Title>
         </div>
     )
 };

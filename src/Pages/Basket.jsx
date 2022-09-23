@@ -1,45 +1,47 @@
 import React from "react";
 import Context from "../Context";
 import Card from "../Components/Card";
+import Title from "../Components/Title";
 import styled from "styled-components";
 
 const Basket = (props) => {
     const context = React.useContext(Context);
     const [backetArr, setBacketArr] = React.useState(context.basket);
 
+    console.clear()
+
     // React.useEffect(() => {
     //     context.forceUpdate()
     // })
 
+    const handleClickRemove = (index) => {
+        const arr = context.basket.filter((e, i) => i !== index)
+        context.basket = arr;
+        setBacketArr(arr)
+        context.forceUpdate()
+    }
+
     return (
-        <Containeer>
-            <div className="container">
-                <h2 className="wrapper">Basket</h2>
-                <div className="wrapper">
-                    <Cards>
-                        {backetArr.map((element, index) => {
-                            const data = {
-                                element: element,
-                                index: index,
-                                f: setBacketArr,
-                            }
-
-                            console.log(element)
-                            return (
-                                <CardStyled>
-                                    <Card {...data} key={index} />
-                                </CardStyled>
-                            )
-                        })}
-                    </Cards>
-                </div>
-
-                <Info>
-                    {context.allCost() === 0 ?
-                        "There are no products in the cart"
-                        : `Total: $${context.allCost()}`}
-                </Info>
-            </div>
+        <Containeer className="Basket-container">
+            <Title>
+                Basket
+            </Title>
+            <Cards>
+                {backetArr.map((element, index) => {
+                    return (
+                        <Card {...element} key={index}>
+                            <button onClick={() => {
+                                handleClickRemove(index)
+                            }}>Remove</button>
+                        </Card>
+                    )
+                })}
+            </Cards>
+            <Info>
+                {context.allCost() === 0 ?
+                    "There are no products in the cart"
+                    : `Total: $${context.allCost()}`}
+            </Info>
         </Containeer>
     )
 };
@@ -51,30 +53,28 @@ display: flex;
 flex-direction: column;
 `;
 
-const CardStyled = styled.div`
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
-    height: 100%;
+// const CardStyled = styled.div`
+//     flex-direction: column;
+//     align-items: flex-end;
+//     justify-content: space-between;
+//     height: 100%;
 
-img {
-    width: 200px;
-}
+// img {
+//     width: 200px;
+// }
 
-h3 {
-    color: var(--black);
-    font-size: 3rem;
-}
+// h3 {
+//     color: var(--black);
+//     font-size: 3rem;
+// }
 
-button {
-    background-color: var(--red);
-}
-`;
+// button {
+//     background-color: var(--red);
+// }
+// `;
 
 const Containeer = styled.div`
 height: 100%;
-// flex-grow: 1;
-// flex
 width: 100%;`;
 
 const Info = styled.div`

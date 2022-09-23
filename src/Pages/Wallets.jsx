@@ -1,13 +1,34 @@
 import React from "react";
+import Context from "../Context";
+import Card from "../Components/Card";
+import db from "../db";
+import CardsContainer from "../Components/CardsContainer";
+import Title from "../Components/Title";
 
 const Wallets = (props) => {
+    const context = React.useContext(Context);
+    const arr = db.filter(element => element.type === "wallets")
+
+    const handleclick = (i) => {
+        context.basket.push(arr[i])
+        context.forceUpdate()
+    }
+
     return (
         <div className="Wallets-container">
-            <div className="container">
-                <div className="wrapper">
-                    <h1>Wallets</h1>
-                </div>
-            </div>
+            <Title>
+                Wallets
+            </Title>
+            <CardsContainer>
+                {arr.map((element, index) => {
+                    console.log(element)
+                    return (
+                        <Card {...element} key={index}>
+                            <button onClick={() => handleclick(index)}>Buy now</button>
+                        </Card>
+                    )
+                })}
+            </CardsContainer>
         </div>
     )
 };

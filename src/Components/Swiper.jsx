@@ -41,28 +41,24 @@ const Swiper = (props) => {
             <div className="btn btn-prew" onClick={() => {
                 transformX >= 0 ? setTransformX(-width * (numbersItems - 3)) : setTransformX(transformX + width)
             }}>
-                <svg viewBox="0 0 47.255 47.255" style={{ transform: "rotate(180deg)", height: "90px" }}>
+                <svg viewBox="0 0 47.255 47.255">
                     <path d="M12.314,47.255c-0.256,0-0.512-0.098-0.707-0.293c-0.391-0.391-0.391-1.023,0-1.414l21.92-21.92l-21.92-21.92 c-0.391-0.391-0.391-1.023,0-1.414s1.023-0.391,1.414,0L35.648,22.92c0.391,0.391,0.391,1.023,0,1.414L13.021,46.962 C12.825,47.157,12.57,47.255,12.314,47.255z" />
                 </svg>
             </div>
 
-            <div className="wrapper">
-                <div className="view-container">
+            <div className="view-container wrapper">
+                <div className="items" style={transform}>
 
-                    <div className="items" style={transform}>
-
-                        {arr.map((item, index) => {
-                            numbersItems += 1;
-                            return (
-                                <div className="item" key={index} ref={ref}>
-                                    <img src={require("../i/" + item.image)} alt="Image" />
-                                    <h3>{item.title}</h3>
-                                    <button>Shop</button>
-                                </div>
-                            )
-                        })}
-
-                    </div>
+                    {arr.map((item, index) => {
+                        numbersItems += 1;
+                        return (
+                            <div className="item" key={index} ref={ref}>
+                                <img src={require("../i/" + item.image)} alt="Image" />
+                                <h3>{item.title}</h3>
+                                <button>Shop</button>
+                            </div>
+                        )
+                    })}
 
                 </div>
             </div>
@@ -104,11 +100,16 @@ const Styles = styles.div`
     
     .btn-prew {
         justify-content: flex-end;
+
+        svg {
+            transform: rotate(180deg);
+        }
     }
     
     .btn svg {
         fill: var(--color3);
         transition: fill 0.2s;
+        height: 90px;
     }
     
     .btn:active svg {
@@ -116,6 +117,7 @@ const Styles = styles.div`
     }
     
     .view-container {
+        flex: 1 0 100%;
         overflow: hidden;
     }
     

@@ -1,7 +1,11 @@
 import React from "react";
 import Context from "../Context";
+import Card from "../Components/Card";
 import Swiper from "../Components/Swiper";
 import Carusel from "../Components/Carusel";
+import styled from "styled-components";
+import CardsContainer from "../Components/CardsContainer";
+import Title from "../Components/Title";
 
 const Home = (props) => {
     const context = React.useContext(Context);
@@ -18,27 +22,19 @@ const Home = (props) => {
             <Carusel />
             <Swiper swiperArr={swiperArr} />
             <div className="container">
-                <h2>
-                    <div className="wrapper">
-                        FEATURED pRODUCTS
-                    </div>
-                </h2>
+                <Title>
+                    FEATURED pRODUCTS
+                </Title>
                 <div className="wrapper">
-                    <div className="cards">
+                    <CardsContainer>
                         {context.homePageArr.map((element, index) => {
                             return (
-                                <section className="card" key={index}>
-                                    <img src={require("../i/" + element.image)} alt="Image" />
-                                    <h3>{element.title}</h3>
-                                    {/* <p>{element.description}</p> */}
-                                    <div>
-                                        <div className="card__price">${element.price}</div>
-                                        <button onClick={() => handleclick(index)}>Buy now</button>
-                                    </div>
-                                </section>
+                                <Card {...element}>
+                                    <button onClick={() => handleclick(index)}>Buy now</button>
+                                </Card>
                             )
                         })}
-                    </div>
+                    </CardsContainer>
                 </div>
             </div>
         </div>

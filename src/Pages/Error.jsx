@@ -1,15 +1,23 @@
 import React from "react";
+import styled from "styled-components";
 
 const Error = (props) => {
     return (
-        <div className="Error-container">
-            <div className="container">
-                <div className="wrapper">
-                    <h1>Error 404</h1>
-                </div>
-            </div>
-        </div>
+        <Styled className="Error-container">
+            <h1>404</h1>
+            <h3>Page not found</h3>
+        </Styled>
     )
 };
 
 export default Error;
+
+const Styled = styled.div`
+color: var(--color4);
+min-height: 100%;
+background-color: var(--color9);
+font-size: 4vh;
+flex: 1 0 auto;
+display: grid;
+place-items: center;
+`;
