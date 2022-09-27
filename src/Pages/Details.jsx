@@ -2,6 +2,7 @@ import React from "react";
 import Context from "../Context";
 import Title from "../Components/Title";
 import styled from "styled-components";
+import Swiper from "../Components/Swiper";
 
 const Details = ({ props }) => {
     const context = React.useContext(Context);
@@ -30,6 +31,7 @@ const Details = ({ props }) => {
                     <button onClick={handleclick}>Buy now</button>
                 </div>
             </div>
+            <Swiper></Swiper>
         </Styled>
     );
 }

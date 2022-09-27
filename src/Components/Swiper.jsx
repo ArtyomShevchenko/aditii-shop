@@ -7,11 +7,10 @@ const Swiper = (props) => {
     const context = React.useContext(Context);
     const [transformX, setTransformX] = React.useState(0)
 
+    
     // get width preRender
     const ref = React.useRef(null);
-    const arr = props.swiperArr
-
-    // console.log(arr1)
+    const arr = context.swiperArr
 
     const [width, setWidth] = React.useState(0);
 
