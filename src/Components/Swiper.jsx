@@ -46,7 +46,7 @@ const Swiper = (props) => {
                 </svg>
             </div>
 
-            <div className="view-container wrapper">
+            <div className="view-container">
                 <div className="items" style={transform}>
 
                     {arr.map((item, index) => {
@@ -83,7 +83,7 @@ const Styles = styles.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
+
     .btn {
         display: flex;
         align-items: center;

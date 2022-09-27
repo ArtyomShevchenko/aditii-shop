@@ -35,9 +35,11 @@ body[data-theme="light"] {
     --color2: #3cc3b5;
 }
 body[data-theme="dark"] {
-    --bg: #000;
+    --bg: black;
     --color1: #fff;
     --color2: #3c43b5;
+    --color3: #3c43b5;
+    --color5: rgba(100, 0, 200, 1);
 }
 
 body {
@@ -59,7 +61,7 @@ a {
 max-width: 1024px;
 width: 100%;
 margin: 0 auto;
-overflow: hidden;
+// overflow: hidden;
 }
 
 button, h1, h2, h3 {

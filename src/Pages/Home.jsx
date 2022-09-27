@@ -29,7 +29,7 @@ const Home = (props) => {
                     <CardsContainer>
                         {context.homePageArr.map((element, index) => {
                             return (
-                                <Card {...element}>
+                                <Card {...element} key={index}>
                                     <button onClick={() => handleclick(index)}>Buy now</button>
                                 </Card>
                             )

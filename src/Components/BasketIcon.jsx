@@ -30,6 +30,7 @@ display: flex;
 align-items: center;
 justify-content: flex-end;
 gap: 1.5rem;
+overflow: hidden;
 `;
 
 const Svg = styled.div`

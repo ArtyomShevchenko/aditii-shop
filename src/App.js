@@ -17,9 +17,10 @@ import Vintage from "./Pages/Vintage";
 import Services from "./Pages/Services";
 import ContactUs from "./Pages/ContactUs";
 import Basket from "./Pages/Basket";
+import Details from "./Pages/Details";
 import Error from "./Pages/Error";
 
-const db = require("./db.json")
+const db = require("./db.json");
 
 function App() {
   // стан для примусового рендеру
@@ -95,6 +96,8 @@ function App() {
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="/Basket" element={<Basket />} />
           <Route path="*" element={<Error />} />
+          {db.map(item => <Route path={"/Details/"+item.id} element={<Details props={item} key={item.id}/>} />)}
+
         </Routes>
         <Footer />
       </div>

@@ -82,6 +82,7 @@ color: white;
 display: flex;
 flex-direction: column;
 justify-content: center;
+overflow: hidden;
 
 .carusel-items {
     transition: all 1s;

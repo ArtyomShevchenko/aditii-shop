@@ -1,16 +1,7 @@
 import React from "react";
-// import Context from "../Context";
 import styled from "styled-components";
 
 const Card = (props) => {
-    // const context = React.useContext(Context);
-
-    // const handleClickRemove = (index) => {
-    //     const arr = context.basket.filter((e, i) => i !== props.index)
-    //     props.f(arr)
-    //     context.basket = arr;
-    // }
-
     return (
         <Styled>
             <Img>
@@ -27,8 +18,6 @@ const Card = (props) => {
                     {props.children}
                 </div>
                 : false}
-            {/* <button onClick={() => handleClickRemove(props.index)}>Remove</button> */}
-            {/* {<p>{props.description ? props.description : "no props.description"}</p>} */}
         </Styled>
     )
 }

@@ -15,6 +15,7 @@ const Styled = styled.div`
 padding: 2rem 0;
 background-color: var(--color2);
 color: var(--color4);
+text-align: start;
 
 h1 {
     font-family: "BebasNeue", sans-serif;
