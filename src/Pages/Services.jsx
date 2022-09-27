@@ -2,7 +2,6 @@ import React from "react";
 import Title from "../Components/Title";
 
 const Services = (props) => {
-    console.log(props)
     return (
         <div className="Services-container">
             <Title>

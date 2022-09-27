@@ -7,7 +7,7 @@ import Title from "../Components/Title";
 
 const Wallets = (props) => {
     const context = React.useContext(Context);
-    const arr = db.filter(element => element.type === "wallets")
+    const arr = db.filter(element => element.type === "wallet")
 
     const handleclick = (i) => {
         context.basket.push(arr[i])
@@ -21,7 +21,6 @@ const Wallets = (props) => {
             </Title>
             <CardsContainer>
                 {arr.map((element, index) => {
-                    console.log(element)
                     return (
                         <Card {...element} key={index}>
                             <button onClick={() => handleclick(index)}>Buy now</button>

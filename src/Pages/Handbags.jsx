@@ -21,7 +21,6 @@ const Handbags = (props) => {
             </Title>
             <CardsContainer>
                 {arr.map((element, index) => {
-                    console.log(element)
                     return (
                         <Card {...element} key={index}>
                             <button onClick={() => handleclick(index)}>Buy now</button>

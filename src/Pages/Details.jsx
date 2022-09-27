@@ -1,9 +1,19 @@
 import React from "react";
+import Context from "../Context";
 import Title from "../Components/Title";
 import styled from "styled-components";
 
 const Details = ({ props }) => {
-    console.log(props)
+    const context = React.useContext(Context);
+
+
+    const handleclick = () => {
+        context.basket.push(props)
+        context.forceUpdate()
+    }
+
+    // console.log(props)
+
     return (
         <Styled className="Details-container">
             <Title>
@@ -13,8 +23,12 @@ const Details = ({ props }) => {
                 <Img>
                     <img src={require("../i/" + props.image)} alt="Image" />
                 </Img>
-                <p>{props.type}</p>
+                <h2>{props.type}</h2>
                 <p>{props.description}</p>
+                <div className="price">
+                    <span>${props.price}</span>
+                    <button onClick={handleclick}>Buy now</button>
+                </div>
             </div>
         </Styled>
     );
@@ -23,13 +37,32 @@ const Details = ({ props }) => {
 export default Details;
 
 const Styled = styled.section`
-
-
 color: var(--color1);
-font-size: 2.5rem;
+font-size: 1.5rem;
 line-height: 2.7rem;
-font-weight: bold;
 text-align: start;
+
+.price {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--color2);
+    
+    span {
+        background: linear-gradient(transparent 95%, red 95%, red 0%);
+    }
+}
+
+& > .wrapper {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem 0;
+}
 
 button {
     display: inline-block;

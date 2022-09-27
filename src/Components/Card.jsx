@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Card = (props) => {
     return (
@@ -9,9 +10,11 @@ const Card = (props) => {
                     ? <img src={require("../i/" + props.image)} alt="Image" />
                     : <div>no props.image</div>}
             </Img>
-            <h3>
-                {props.title ? props.title : "no props.title"}
-            </h3>
+            <Link to={"/Details/" + props.id} >
+                <h3>
+                    {props.title ? props.title : "no props.title"}
+                </h3>
+            </Link>
             {props.children
                 ? <div>
                     <span>${props.price ? props.price : "no props.price"}</span>

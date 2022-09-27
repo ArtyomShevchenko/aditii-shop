@@ -1,8 +1,7 @@
 import React from "react";
 import Context from "../Context";
 import styles from "styled-components";
-
-// const arr = ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3", "3.1", "3.2", "3.3"]
+import { Link } from "react-router-dom";
 
 const Swiper = (props) => {
     const context = React.useContext(Context);
@@ -46,16 +45,17 @@ const Swiper = (props) => {
                 </svg>
             </div>
 
-            <div className="view-container">
+            <div className="view-container wrapper">
                 <div className="items" style={transform}>
-
                     {arr.map((item, index) => {
                         numbersItems += 1;
                         return (
                             <div className="item" key={index} ref={ref}>
                                 <img src={require("../i/" + item.image)} alt="Image" />
                                 <h3>{item.title}</h3>
-                                <button>Shop</button>
+                                <Link to={"/Details/" + item.id} >
+                                    <button>Shop</button>
+                                </Link>
                             </div>
                         )
                     })}
@@ -83,6 +83,10 @@ const Styles = styles.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    a {
+        margin-right: auto;
+    }
 
     .btn {
         display: flex;

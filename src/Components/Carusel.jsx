@@ -1,5 +1,6 @@
 import React from "react";
 import Context from "../Context";
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
 const Carusel = (props) => {
@@ -21,12 +22,6 @@ const Carusel = (props) => {
         setWidth(ref.current.offsetWidth);
     }, []);
 
-    // test
-    // const handleclick = (i) => {
-    //     context.basket.push(context.homePageArr[i])
-    //     context.forceUpdate()
-    // }
-
     return (
         <Styled className="Carusel">
             <div className="wrapper">
@@ -40,7 +35,9 @@ const Carusel = (props) => {
                                 <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
                                     <h3>{item.title}</h3>
                                     <p>{item.description}</p>
-                                    <button>Shop now</button>
+                                    <Link to={"/Details/" + item.id} >
+                                        <button>Shop now</button>
+                                    </Link>
                                 </div>
                             </div>
                         )
@@ -84,6 +81,10 @@ flex-direction: column;
 justify-content: center;
 overflow: hidden;
 
+.wrapper {
+    overflow: hidden;
+}
+
 .carusel-items {
     transition: all 1s;
     display: flex;
@@ -120,9 +121,13 @@ button {
     background-color: transparent;
     border: 0.3rem solid white;
     border-radius: 0.6rem;
-    margin-right: auto;
     box-shadow: none;
     color: var(--color4);
+    cursor: pointer;
+}
+
+a {
+    margin-right: auto;
 }`;
 
 const Img = styled.div`

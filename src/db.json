@@ -41,8 +41,8 @@
     },
     {
         "id": 5,
-        "type": "shoes jordan",
-        "title": "branded shoes",
+        "type": "shoes",
+        "title": "shoes jordan",
         "description": "A shoe is an item of footwear intended to protect and comfort the human foot while the wearer is doing various activities. Shoes are also used as an item of decoration and fashion. The design of shoes has varied enormously through time and from culture to culture, with appearance originally being tied to function. Additionally, fashion has often dictated many design elements, such as whether shoes have very high heels or flat ones. Contemporary footwear in the 2010s varies widely in style, complexity and cost. Basic sandals may consist of only a thin sole and simple strap and be sold for a low cost. High fashion shoes made by famous designers may be made of expensive materials, use complex construction and sell for hundreds or even thousands of dollars a pair. Some shoes are designed for specific purposes, such as boots designed specifically for mountaineering or skiing.",
         "price": "26",
         "image": "men_shoes_6.png"
@@ -142,5 +142,165 @@
         "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
         "price": "36",
         "image": "backpack_6.png"
+    },
+    {
+        "id": 18,
+        "type": "wallet",
+        "title": "branded wallet",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "37",
+        "image": "wallet_7.png"
+    },
+    {
+        "id": 19,
+        "type": "wallet",
+        "title": "branded wallet",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "38",
+        "image": "wallet_6.png"
+    },
+    {
+        "id": 20,
+        "type": "wallet",
+        "title": "branded wallet",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "39",
+        "image": "wallet_5.png"
+    },
+    {
+        "id": 21,
+        "type": "wallet",
+        "title": "branded wallet",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "40",
+        "image": "wallet_4.png"
+    },
+    {
+        "id": 22,
+        "type": "wallet",
+        "title": "branded wallet",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "41",
+        "image": "wallet_3.png"
+    },
+    {
+        "id": 23,
+        "type": "wallet",
+        "title": "branded wallet",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "42",
+        "image": "wallet_2.png"
+    },
+    {
+        "id": 24,
+        "type": "wallet",
+        "title": "branded wallet",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "43",
+        "image": "wallet_1.png"
+    },
+    {
+        "id": 25,
+        "type": "wallet",
+        "title": "branded accessories",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "44",
+        "image": "wallet_0.png"
+    },
+    {
+        "id": 26,
+        "type": "accessories",
+        "title": "branded accessories",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "45",
+        "image": "accessories_6.png"
+    },
+    {
+        "id": 27,
+        "type": "accessories",
+        "title": "branded accessories",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "46",
+        "image": "accessories_5.png"
+    },
+    {
+        "id": 28,
+        "type": "accessories",
+        "title": "branded accessories",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "47",
+        "image": "accessories_4.png"
+    },
+    {
+        "id": 29,
+        "type": "accessories",
+        "title": "branded accessories",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "48",
+        "image": "accessories_3.png"
+    },
+    {
+        "id": 30,
+        "type": "accessories",
+        "title": "branded accessories",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "49",
+        "image": "accessories_2.png"
+    },
+    {
+        "id": 31,
+        "type": "accessories",
+        "title": "branded accessories",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "50",
+        "image": "accessories_1.png"
+    },
+    {
+        "id": 32,
+        "type": "accessories",
+        "title": "branded accessories",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "51",
+        "image": "accessories_0.png"
+    },
+    {
+        "id": 33,
+        "type": "handbags",
+        "title": "branded handbags",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "52",
+        "image": "handbags_0.png"
+    },
+    {
+        "id": 34,
+        "type": "handbags",
+        "title": "branded handbags",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "53",
+        "image": "handbags_1.png"
+    },
+    {
+        "id": 35,
+        "type": "handbags",
+        "title": "branded handbags",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "54",
+        "image": "handbags_2.png"
+    },
+    {
+        "id": 36,
+        "type": "handbags",
+        "title": "branded handbags",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "55",
+        "image": "handbags_3.png"
+    },
+    {
+        "id": 37,
+        "type": "handbags",
+        "title": "branded handbags",
+        "description": "A backpack — also called bookbag, kitbag, knapsack, rucksack, pack, or sackpack backsack — is, in its simplest form, a cloth sack carried on one's back and secured with two straps that go over the shoulders, but there can be variations to this basic design. Lightweight 'type's of backpacks are sometimes worn on only one shoulder strap. Backpacks are commonly used by hikers and students, and are often preferred to handbags for carrying heavy loads or carrying any sort of equipment, because of the limited capacity to carry heavy weights for long periods of time in the hands.",
+        "price": "56",
+        "image": "handbags_4.png"
     }
 ]

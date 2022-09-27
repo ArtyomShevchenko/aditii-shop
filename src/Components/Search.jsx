@@ -80,18 +80,17 @@ z-index: 50;
 .popup {
     margin-top: 1rem;
     background-color: var(--bg);
-    padding: 0.5rem;
 }
 
 li {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    color: var(--color1);
+    color: var(--color2);
+    transition: color 0.2s;
     
     &:hover {
-        background-color: var(--color2);
-        box-shadow: 0 0 0.5rem var(--color2);
+        color: var(--color1);
     }
 }
 
