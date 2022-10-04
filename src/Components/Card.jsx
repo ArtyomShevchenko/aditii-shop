@@ -10,7 +10,7 @@ const Card = (props) => {
                     ? <img src={require("../i/" + props.image)} alt="Image" />
                     : <div>no props.image</div>}
             </Img>
-            <Link to={"/Details/" + props.id} >
+            <Link to={"/Details/" + props.id} onClick={() => console.log(props.id)}>
                 <h3>
                     {props.title ? props.title : "no props.title"}
                 </h3>
@@ -88,17 +88,4 @@ img {
     right: 0;
     bottom: 0;
     object-fit: contain;
-}
-`;
-
-// <Img>
-//     < img src={require("../i/" + props.element.image)} alt="Image" />
-// </Img>
-// <div>
-//     <h3>{props.element.title}</h3>
-//     <div>
-//         <span className="card__price">${props.element.price}</span>
-//         <button onClick={() => handleClickRemove(props.index)}>Remove</button>
-//     </div>
-//     {/* {<p>{props.element.description}</p>} */}
-// </div>
+}`;

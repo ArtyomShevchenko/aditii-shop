@@ -256,20 +256,19 @@ const ContactUs = (props) => {
                 ContactUs
             </Title>
             <div className="wrapper">
-                {/* <form action="action_page.php"> */}
                 <form action="action_page.php">
 
-                    <label for="fname">
+                    <label>
                         <p>First Name</p>
                         <input type="text" id="fname" name="firstname" placeholder="Your name.." />
                     </label>
 
-                    <label for="lname">
+                    <label>
                         <p>Last Name</p>
                         <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
                     </label>
 
-                    <label for="country">
+                    <label>
                         <p>Country</p>
                         <select id="country" name="country">
                             {countryArray.map((element, index) => {
@@ -282,7 +281,7 @@ const ContactUs = (props) => {
                         </select>
                     </label>
 
-                    <label for="subject">
+                    <label>
                         <p>Subject</p>
                         <textarea id="subject" name="subject" placeholder="Write something.." rows="10" cols="45"></textarea>
                     </label>
@@ -298,11 +297,11 @@ const ContactUs = (props) => {
 export default ContactUs;
 
 const Styled = styled.section`
-
 form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 2rem 0;
 }
 
 input, textarea, select {
@@ -318,7 +317,7 @@ input, textarea, select {
 }
 
 input::placeholder, textarea::placeholder {
-    font-family: "BebasNeue";
+    font-family: var(--font1);
     font-size: 1.5rem;
     color: var(--color2);
 }

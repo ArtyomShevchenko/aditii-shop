@@ -25,7 +25,7 @@ const Basket = (props) => {
                 {backetArr.map((element, index) => {
                     return (
                         <Card {...element} key={index}>
-                            <button onClick={() => {
+                            <button onClick={(index) => {
                                 handleClickRemove(index)
                             }}>Remove</button>
                         </Card>
